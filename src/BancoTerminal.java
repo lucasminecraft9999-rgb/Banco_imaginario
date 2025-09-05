@@ -16,11 +16,12 @@ public class BancoTerminal {
         System.out.println("valor solicitado: " + valor_solicitado + "R$");
 
         if (valor_solicitado > saldo){
-            System.out.println("saldo insuficiente");
+            System.out.println("Saldo insuficiente");
         }
         else {
             saldo = saldo - valor_solicitado;
             System.out.println("Seu saldo atual ficou: " + saldo + "R$");
         }
+
     }
     }
