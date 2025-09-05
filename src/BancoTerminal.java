@@ -3,24 +3,24 @@ import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class BancoTerminal {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
 
-    public double saldo;
-    public double valor_solicitado;
+        System.out.println("Digite o valor do seu saldo: ");
+        double  saldo = scanner.nextDouble();
 
+        System.out.println("Digite o valor solicitado: ");
+        double  valor_solicitado = scanner.nextDouble();
 
-    public BancoTerminal(double saldo , double valor_solicitado){
-        this.saldo = saldo;
-        this.valor_solicitado = valor_solicitado;
-    }
+        System.out.println("valor do seu saldo: " + saldo + "R$");
+        System.out.println("valor solicitado: " + valor_solicitado + "R$");
 
-    public double depositar() {
         if (valor_solicitado > saldo){
-            System.out.println("Saldo insuficiente");
+            System.out.println("saldo insuficiente");
         }
         else {
             saldo = saldo - valor_solicitado;
-
+            System.out.println("Seu saldo atual ficou: " + saldo + "R$");
         }
-        return saldo;
     }
     }
